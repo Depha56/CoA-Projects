@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.gallery {
+    display: flex;
+    width: 1178px;
+    height: 588px;
+    gap: 2px;
+    position: absolute;
+    opacity: 1; 
+}
+
+.image-container {
+    width: 293px;
+    height: 588px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1; 
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #FFFFFF;
+    padding: 10px;
+    z-index: 2; 
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.info h2 {
+    width: 180px;
+    height: 68px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34.5px;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.info .bigheader {
+    width: 280px;
+    height: 68px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34.5px;
+    text-transform: uppercase; 
+    margin: 15px 0;
+}
+
+.info p {
+    width: 213px;
+    height: 16px;
+    opacity: 70%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.02px;
+    margin: 5px 0;
+}
+
+.info .know-more {
+    font-family: "Poppins", sans-serif;
+    display: none;
+    color: #1ad1ed;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.image-container:hover img {
+    filter: grayscale(100%) blur(10px);
+    
+}
+
+.image-container:hover .info {
+    bottom: 50px;
+    opacity: 1;
+}
+
+.image-container:hover .know-more {
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: row;
+        width: 400px;
+        height: auto;
+        gap: 2PX;
+    }
+    
+    .image-container {
+        width: 400px;
+        height: 600px;
+    }
+    
+    .info {
+        display: none;
+    }
+     .image-container:hover img {
+        filter: grayscale(100%) blur(10px);
+        transform: scaleY(1.1); /* Expand the image top and bottom on hover */
+    }
+}
+ 
+
+  
