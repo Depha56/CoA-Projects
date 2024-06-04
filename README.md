@@ -21,7 +21,7 @@ Before you begin, ensure you have met the following requirements:
 To set up and run this project locally, follow these steps:
 
 1.Clone the repository:
-    https://github.com/Depha56/CoA-Projects.git
+    <b>https://github.com/Depha56/CoA-Projects.git</b>
 
 2.Naigate to the project directory:
      cd CoA-Projects
@@ -41,6 +41,49 @@ To use the photo gallery:
 
 # CoA-Projects(Challenges)
 
-## Introduction
+<b>4.2 Coding Challenge 1: Array Manipulation</b>
+
+## Problem Statement:
+
+Given an array of integers (arr) and a target sum (target), determine if there exists a contiguous subarray within the array that sums up to the target. Return true if such a subarray exists, otherwise return false.
+
+## Solution 
+-> Navigate to : cd Challenges  
+-> Ensure that you have node in  you computer hence run in your terminal : 
+<b> node arrayMap.js </b>
+
+-> There was trying text in code also you can use the following ones:
+
+### Example Usage
+const arr = [1, 2, 3, 4];
+const target = 6;
+console.log(hasSubarrayWithSum(arr, target)); // Output: true (subarray [1, 2, 3] sums to 6)
+
+<b>4.3 Coding Challenge 2: String Transformation</b>
+
+## Problem Statement:
+
+Given a string (str), transform it based on the following rules:
+
+->If the length of the string is divisible by 3, reverse the entire string.
+
+->If the length of the string is divisible by 5, replace each character with its ASCII code.
+
+->If the length of the string is divisible by both 3 and 5, perform both operations in the order specified above (reverse first, then convert to ASCII codes).
+
+## Solution 
+-> Navigate to : cd Challenges  
+-> Ensure that you have node in  you computer hence run in your terminal : 
+<b> stringTransform.js </b>
+
+-> There was trying text in code also you can use the following ones:
+
+### Example Usage
+const input = "apple"; // Length is 5 (divisible by 5)
+const output = transformString(input);
+console.log("Input:", input);
+console.log("Output:", output); // Output: 97 112 112 108 101 (ASCII codes)
+
+
 
 

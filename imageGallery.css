@@ -4,11 +4,22 @@
      font-family: "din-condensed";
      src: url("./assets/fonts/DINCondensed-Bold.ttf");
 }
+:root {
+  --font-family-poppins: "Poppins", sans-serif;  
+  --color-white: #FFFFFF;                          
+  --image-container-width: 293px;                 
+  --image-container-height: 558px;
+  --info-opacity: 0.3 ease;                             
+  --know-more-font-size: 14px;                     
+  --transition-duration: 0.4s;                      
+  --gap: 2px;    
+  --respowidth: 400px;                                   
+}
 *{
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     transition: all 0.4s ;
+     transition: all var(--transition-duration);
 }
 body {
     display: flex;
@@ -21,12 +32,12 @@ body {
     display: flex;
     width: 1178px;
     height: 588px;
-    gap: 2px;
+    gap: var(--gap);
     position: absolute;
 }
 .image-container {
-    width: 293px;
-    height: 558px;
+    width: var(--image-container-width);
+    height: var(--image-container-height);
     position: relative;
     overflow: hidden;
     margin-top: 50px;
@@ -50,10 +61,10 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: #FFFFFF;
+    color: var(--color-white);
     padding: 10px;
     z-index: 2; 
-    opacity: 0.3s ease; 
+    opacity:var(--info-opacity); 
 }
 .info h1 {
     width: 220px;
@@ -70,47 +81,42 @@ body {
     width: 213px;
     height: 16px;
     opacity: 70%;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-family-poppins);
     font-weight: 400;
     font-size: 12px;
     line-height: 16.02px;
     margin: 5px 0;
 }
 .info .know-more {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-family-poppins);
     display: none;
     color: #1ad1ed;
     font-size: 14px;
     margin-top: 10px;
 }
-
 .image-container:hover img {
     filter: grayscale(100%) blur(5px);
     transform: scale(1.1);
     opacity: 0.5;
-
 }
 .image-container:hover .info {
     bottom: 50px;
     opacity: 1;
 }
-
 .image-container:hover .know-more {
     display: inline-block;
 }
 @media (max-width: 600px) {
     .gallery {
         flex-direction: row;
-        width: 400px;
+        width: var(--respowidth);
         height: auto;
-        gap: 2PX;
+        gap: var(--gap);
     }
-    
     .image-container {
-        width: 400px;
+        width: var(--respowidth);
         height: 600px;
     }
-    
     .info {
         display: none;
     }

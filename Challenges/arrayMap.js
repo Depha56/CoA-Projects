@@ -29,6 +29,6 @@ function hasSubarrayWithSum(arr, target) {
 }
 
 // Example usage
-const arr = [1, -1, 5, -2, 3];
-const target = 3;
+const arr = [1, 5, 5, -2, 3];
+const target = 12;
 console.log(hasSubarrayWithSum(arr, target)); // Output: true
