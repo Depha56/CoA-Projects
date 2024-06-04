@@ -106,6 +106,7 @@ body {
 .image-container:hover .know-more {
     display: inline-block;
 }
+/* MOBILE VIEW CODES(RESPONSIVESS) FOR MAX-WIDTH:600 */
 @media (max-width: 600px) {
     .gallery {
         flex-direction: row;
