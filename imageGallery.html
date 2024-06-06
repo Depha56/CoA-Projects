@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image gallery</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="imageGallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -33,7 +31,7 @@
             <div class="info">
                 <h1>Common Brown <br>Baboon</h1>
                 <p>South Africa</p>
-                <span class="know-more">Know more  <i class="fas fa-arrow-right"></i><span>
+                <span class="know-more">Know more  <i class="fas fa-arrow-right"></i></span>
             </div>
         </div>
         <div class="image-container" data-full="images/Image4.png" data-min="images/minImage4.png">
@@ -45,6 +43,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modal-img">
+            <div class="modal-info">
+                <h1 id="modal-title"></h1>
+                <p id="modal-location"></p>
+            </div>
+        </div>
+    </div>
+
     <script src="imageGallery.js"></script>
 </body>
 </html>
+
+
+
